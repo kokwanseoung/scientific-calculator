@@ -1,9 +1,9 @@
-# scientific-calculator
+# scientific-calculator(공학용 계산기 미니)
 ## team members
 - 고관성
 - 신혜지
 ## project objetive
-- 공학용 계산기로 다양한 기능들을 구현항 예정이다.
+- 공학용 계산기로 다양한 기능들을 구현할 예정이다.
 - 변수들은 입력을 받고 저장한 후에 나중에 결과와 같이 출력
 EX) 3과 5를 입력 후 덧셈 실행 -> '3'과 '5'의 '덧셈'결과는 '5'입니다.
 #### specification
