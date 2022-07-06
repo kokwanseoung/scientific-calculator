@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 
@@ -25,6 +26,9 @@ int main() {
 		break;
 	case '/': // n1/n2 = result
 		result = n1 / n2;
+		break;
+	case '^': // n1 ^ n2 = reslut (제곱)
+		result = pow(n1, n2);
 		break;
 	default:
 		cout << "잘못된 수학 부호입니다.";
