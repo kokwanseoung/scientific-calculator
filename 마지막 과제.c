@@ -12,7 +12,14 @@ int main()
 	int n1, n2;
 	int result;
 	char math_sign;
-	cout << "대충 계산기 UI와 계산해보라는 소개 문구\n";
+	cout << "	 공학용 계산기 			\n";
+	cout << " ------------------------------ \n\n";
+	cout << "   +     -      /       *   \n\n";
+	cout << "   log   exp    √      ^   \n\n";
+	cout << "   !                        \n\n";
+	cout << " *******************************\n";
+	cout << " 복소수 계산 모드:            \n";
+	cout << " ------------------------------ \n";
 	cin >> n1;
 	cin >> math_sign;
 	cin >> n2;
@@ -38,9 +45,9 @@ int main()
 		break;
 
 	}
-	
+
 	cout << result;
-	
+
 
 	int a, i = 1, fact = 1;
 	printf("Enter a number: ");
