@@ -8,10 +8,14 @@ using namespace std;
 int main()
 
 {
+	double n1, n2;
+	double result;
+
 	int n1, n2;
 	int result;
 	int i, fact = 0;
 	double n3;
+
 	char math_sign;
 	cout << "	 공학용 계산기 			\n";
 	cout << " ------------------------------ \n\n";
@@ -24,6 +28,8 @@ int main()
 	cin >> n1;
 	cin >> math_sign;
 	cin >> n2;
+
+	result = 0;
 
 	switch (math_sign) {
 	case '+':
@@ -40,6 +46,14 @@ int main()
 	case '^':
 		result = pow(n1, n2);
 		break;
+
+		/*	case 'log':
+		result = log10(n1);
+		break;
+	case 'exp':
+		result = exp(n1);
+		break;*/ //에러
+
 
 	case '!':
 		printf("Enter a number: ");
@@ -58,8 +72,9 @@ int main()
 
 
 	default:
-		cout << "잘못된 수학 부호입니다.";
+		cout << "잘못된 입력입니다.";
 		break;
+		main();
 
 	}
 
