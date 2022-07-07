@@ -11,6 +11,8 @@ int main()
 {
 	int n1, n2;
 	int result;
+	int i, fact = 0;
+	double n3;
 	char math_sign;
 	cout << "	 공학용 계산기 			\n";
 	cout << " ------------------------------ \n\n";
@@ -25,21 +27,37 @@ int main()
 	cin >> n2;
 
 	switch (math_sign) {
-	case '+': // n1 + n2 = result
-		result = n1 + n2;
+	case '+':
 		break;
-	case '-': // n1 - n2 = result
+	case '-':
 		result = n1 - n2;
 		break;
-	case '*': // n1 * n2 = result
+	case '*':
 		result = n1 * n2;
 		break;
-	case '/': // n1/n2 = result
+	case '/':
 		result = n1 / n2;
 		break;
-	case '^': // n1 ^ n2 = reslut (제곱)
+	case '^':
 		result = pow(n1, n2);
 		break;
+
+	case '!':
+		printf("Enter a number: ");
+		scanf_s("%d", &n1);
+		for (i = 1; i <= n1; i++)
+			fact = fact * i;
+		printf("The factorial of %d is %d. \n\n", n1, fact);
+		break;
+
+	case '√':
+		printf("Enter number: ");
+		scanf_s("%lf", &n3);
+		printf("The sqrt of %0.3lf is %0.3lf", n3, sqrt(n3));
+		break;
+
+
+
 	default:
 		cout << "잘못된 수학 부호입니다.";
 		break;
@@ -49,12 +67,7 @@ int main()
 	cout << result;
 
 
-	int a, i = 1, fact = 1;
-	printf("Enter a number: ");
-	scanf_s("%d", &a);
-	for (i = 1; i <= a; i++)
-		fact = fact * i;
-	printf("The factorial of %d is %d. \n\n", a, fact);
+
 
 
 }
