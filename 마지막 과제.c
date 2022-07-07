@@ -9,8 +9,8 @@ using namespace std;
 int main()
 
 {
-	int n1, n2;
-	int result;
+	double n1, n2;
+	double result;
 	char math_sign;
 	cout << "	 공학용 계산기 			\n";
 	cout << " ------------------------------ \n\n";
@@ -23,6 +23,8 @@ int main()
 	cin >> n1;
 	cin >> math_sign;
 	cin >> n2;
+
+	result = 0;
 
 	switch (math_sign) {
 	case '+': // n1 + n2 = result
@@ -40,9 +42,17 @@ int main()
 	case '^': // n1 ^ n2 = reslut (제곱)
 		result = pow(n1, n2);
 		break;
-	default:
-		cout << "잘못된 수학 부호입니다.";
+		/*	case 'log':
+		result = log10(n1);
 		break;
+	case 'exp':
+		result = exp(n1);
+		break;*/ //에러
+
+	default:
+		cout << "잘못된 입력입니다.";
+		break;
+		main();
 
 	}
 
