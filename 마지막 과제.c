@@ -41,6 +41,7 @@ int main()
 	printf("	특수 계산 모드	\n\n");
 	printf("------------------------------------------------------------ \n\n");
 	printf("10.복소수 계산	11. 행렬 계산	12. 근의 공식 및 판별식	13. 각도 \n");
+	printf("0. 종료 \n");
 	printf("------------------------------------------------------------ \n\n");
 	printf("실행하실 계산의 번호를 입력해 주세요. : ");
 	scanf_s("%d", &a);
@@ -86,17 +87,17 @@ int main()
 	case 5:
 		//로그계산 (log 10 한정)
 		printf("숫자를 입력하시오 : ");
-		scanf_s("%d", &n1);
-		result = log10(n1);
-		printf("log10 %d = %d ", n1, result);
+		scanf_s("%d", &n3);
+		result = log10(n3);
+		printf("log10 %d = %d ", n3, result);
 		break;
 
 	case 6:
 		//지수계산 (e^n 계산)
 		printf("숫자를 입력하시오 : ");
-		scanf_s("%d", &n1);
-		result = exp(n1);
-		printf("exp(%d) = %d ", n1, result);
+		scanf_s("%d", &n3);
+		result = exp(n3);
+		printf("exp(%d) = %d ", n3, result);
 		break;
 
 	case 7:
@@ -109,8 +110,9 @@ int main()
 		//제곱계산
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n1);
-		result = n1 * n1;
-		printf("입력하신 숫자 %d 의 제곱의 값은 %d입니다.", n1, result);
+		printf("숫자를 입력하시오 : ");
+		scanf_s("%d", &n2);
+		printf("입력하신 숫자 %d ^ %d 제곱의 값은 %0.1lf입니다.", n1, n2, pow(n1,n2));
 		break;
 
 	case 9:
@@ -156,8 +158,15 @@ int main()
 
 	case 13:
 		//각도
+		printf("각도(0~360°)를 숫자만 입력해 주세요.: ");
+		scanf_s("%lf", &n4);
+		printf("sin %d= %0.3lf\ncos %d = %0.3lf\ntan %d = %0.3lf\n", n4, sin(n4), n4, cos(n4), n4, tan(n4));
 		break;
 
+	case 0:
+		//종료
+		printf("공학용 계산기를 종료합니다.");
+		return 0;
 	default:
 		cout << "잘못된 입력입니다.";
 		break;
