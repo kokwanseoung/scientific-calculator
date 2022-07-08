@@ -4,33 +4,14 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
+typedef struct Complex { double real; double imagin; }; Complex;
 
-
-int main()
+int main(void)
 
 {
 
 	int n1, n2, n3;  int result; int i, d; int fact = 1; double n4; int a;
 
-	/*cout << "	 공학용 계산기 			\n";
-	double n1, n2;
-	double result;
-	int n1, n2;
-	int result;
-	int i, fact = 0;
-	double n3;
-	char math_sign;
-	cout << "	 공학용 계산기 			\n";
-	cout << " ------------------------------ \n\n";
-	cout << "   +     -      /       *   \n\n";
-	cout << "   log   exp    √      ^   \n\n";
-	cout << "   !                        \n\n";
-	cout << " *******************************\n";
-	cout << " 복소수 계산 모드:            \n";
-	cout << " ------------------------------ \n";
-	cin >> n1;
-	cin >> a;
-	cin >> n2;*/
 
 	printf("\n	공학용 계산기	\n\n");
 	printf("	일반 계산기		\n");
@@ -85,7 +66,6 @@ int main()
 		break;
 
 	case 5:
-		//로그계산 (log 10 한정)
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n3);
 		result = log10(n3);
@@ -93,7 +73,6 @@ int main()
 		break;
 
 	case 6:
-		//지수계산 (e^n 계산)
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n3);
 		result = exp(n3);
@@ -107,12 +86,11 @@ int main()
 		break;
 
 	case 8:
-		//제곱계산
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n1);
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n2);
-		printf("입력하신 숫자 %d ^ %d 제곱의 값은 %0.1lf입니다.", n1, n2, pow(n1,n2));
+		printf("입력하신 숫자 %d ^ %d 제곱의 값은 %0.1lf입니다.", n1, n2, pow(n1, n2));
 		break;
 
 	case 9:
@@ -124,7 +102,30 @@ int main()
 		break;
 
 	case 10:
-		//복소수 계산
+		Complex a1;
+		printf("첫번째 복소수 입력하기[실수 허수 순으로]: ");
+		scanf_s("%lf %lf", &a1.real, &a1.imagin);
+
+		Complex a2;
+		printf("두번째 복소수 입력하기[실수 허수 순으로]: ");
+		scanf_s("%lf %lf", &a2.real, &a2.imagin);
+
+		Complex plus;
+		plus.real = a1.real + a2.real;
+		plus.imagin = a1.imagin + a2.imagin;
+
+		Complex minuse;
+		minuse.real = a1.real - a2.real;
+		minuse.imagin = a1.imagin - a2.imagin;
+
+		Complex multi;
+		multi.real = (a1.real * a2.real) - (a1.imagin * a2.imagin);
+		multi.imagin = (a1.real * a2.real) + (a1.imagin * a2.imagin);
+
+		printf("입력받은 두 복소수의 합은 실수부분 : %0.2lf , 허수부분 : %0.2lf입니다.\n", plus.real, plus.imagin);
+		printf("입력받은 두 복소수의 차는 실수부분 : %0.2lf , 허수부분 : %0.2lf입니다.\n", minuse.real, minuse.imagin);
+		printf("입력받은 두 복소수의 곱은 실수부분 : %0.2lf , 허수부분 : %0.2lf입니다.\n", multi.real, multi.imagin);
+
 		break;
 
 	case 11:
@@ -157,16 +158,15 @@ int main()
 		break;
 
 	case 13:
-		//각도
 		printf("각도(0~360°)를 숫자만 입력해 주세요.: ");
 		scanf_s("%lf", &n4);
-		printf("sin %d= %0.3lf\ncos %d = %0.3lf\ntan %d = %0.3lf\n", n4, sin(n4), n4, cos(n4), n4, tan(n4));
+		printf("sin %lf= %0.3lf\ncos %lf = %0.3lf\ntan %lf = %0.3lf\n", n4, sin(n4), n4, cos(n4), n4, tan(n4));
 		break;
 
 	case 0:
-		//종료
 		printf("공학용 계산기를 종료합니다.");
 		return 0;
+    
 	default:
 		cout << "잘못된 입력입니다.";
 		break;
