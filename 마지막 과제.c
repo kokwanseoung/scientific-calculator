@@ -9,9 +9,9 @@ typedef struct Complex { double real; double imagin; }; Complex;
 int main(void)
 
 {
-	int n1, n2, n3;  int result; int i, d; int fact = 1; double n4; int a;
 
-
+	int n1, n2, n3;  int result; int i, j, d; int fact = 1; double n4; int a;
+	int arr1[3][3]; int arr2[3][3]; int sum_arr[3][3]; int min_arr[3][3]; int multi_arr[3][3];
 
 	printf("\n	공학용 계산기	\n\n");
 	printf("	일반 계산기		\n");
@@ -94,7 +94,7 @@ int main(void)
 		break;
 
 	case 9:
-		printf("숫자를 입력하시오: ");
+		printf("Enter a number: ");
 		scanf_s("%d", &n1);
 		for (i = 1; i <= n1; i++)
 			fact = fact * i;
@@ -129,7 +129,71 @@ int main(void)
 		break;
 
 	case 11:
-		//행렬 계산
+		printf("첫번째 행렬의 원소를 차례대로 입력하시오.: ");
+		for (i = 0; i < 3; i++)
+		{
+			for (j = 0; j < 3; j++)
+			{
+
+				scanf_s("%d", &arr1[i][j]);
+			}
+		}
+		printf("두번째 행렬의 원소를 차례대로 입력하시오.: ");
+		for (i = 0; i < 3; i++)
+		{
+			for (j = 0; j < 3; j++) {
+
+				scanf_s("%d", &arr2[i][j]);
+			}
+
+		}
+		printf("\n첫번째 행렬: \n");
+		for (i = 0; i < 3; i++)
+		{
+			for (j = 0; j < 3; j++)
+			{
+				printf("%2d ", arr1[i][j]);
+			}
+		}
+
+		printf("\n두번째 행렬: \n");
+		for (i = 0; i < 3; i++)
+		{
+			for (j = 0; j < 3; j++)
+			{
+				printf("%2d ", arr2[i][j]);
+			}
+		}
+		printf("\n\n입력하신 두 행렬의 합.\n\n");
+		for (i = 0; i < 3; i++)
+		{
+			for (j = 0; j < 3; j++)
+			{
+				sum_arr[i][j] = arr1[i][j] + arr2[i][j];
+				printf("%2d ", sum_arr[i][j]);
+			}
+		}
+
+
+		printf("\n\n입력하신 두 행렬의 차.\n\n");
+		for (i = 0; i < 3; i++)
+		{
+			for (j = 0; j < 3; j++)
+			{
+				min_arr[i][j] = arr1[i][j] - arr2[i][j];
+				printf("%2d ", min_arr[i][j]);
+			}
+		}
+
+		printf("\n\n입력하신 두 행렬의 곱.\n\n");
+		for (i = 0; i < 3; i++)
+		{
+			for (j = 0; j < 3; j++)
+			{
+				multi_arr[i][j] = arr1[i][j] * arr2[i][j];
+				printf("%2d ", multi_arr[i][j]);
+			}
+		}
 		break;
 
 	case 12:
@@ -166,6 +230,7 @@ int main(void)
 	case 0:
 		printf("공학용 계산기를 종료합니다.");
 		return 0;
+
 	default:
 		cout << "잘못된 입력입니다.";
 		break;
