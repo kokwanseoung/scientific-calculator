@@ -9,7 +9,6 @@ typedef struct Complex { double real; double imagin; }; Complex;
 int main(void)
 
 {
-
 	int n1, n2, n3;  int result; int i, j, d; int fact = 1; double n4; int a;
 	int arr1[3][3]; int arr2[3][3]; int sum_arr[3][3]; int min_arr[3][3]; int multi_arr[3][3];
 
@@ -230,7 +229,7 @@ int main(void)
 	case 0:
 		printf("공학용 계산기를 종료합니다.");
 		return 0;
-
+    
 	default:
 		cout << "잘못된 입력입니다.";
 		break;
