@@ -11,7 +11,7 @@ int main()
 {
 
 	int n1, n2, n3;  int result; int i, d; int fact = 1; double n4; int a;
-  
+
 	/*cout << "	 공학용 계산기 			\n";
 	double n1, n2;
 	double result;
@@ -84,11 +84,19 @@ int main()
 		break;
 
 	case 5:
-		//로그계산
+		//로그계산 (log 10 한정)
+		printf("숫자를 입력하시오 : ");
+		scanf_s("%d", &n1);
+		result = log10(n1);
+		printf("log10 %d = %d ", n1, result);
 		break;
 
 	case 6:
-		// 지수계산
+		//지수계산 (e^n 계산)
+		printf("숫자를 입력하시오 : ");
+		scanf_s("%d", &n1);
+		result = exp(n1);
+		printf("exp(%d) = %d ", n1, result);
 		break;
 
 	case 7:
