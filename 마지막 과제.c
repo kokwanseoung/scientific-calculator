@@ -9,8 +9,8 @@ typedef struct Complex { double real; double imagin; }; Complex;
 int main(void)
 
 {
-	int n1, n2, n3;  int result; int i, d; int fact = 1; double n4; int a;
 
+	int n1, n2, n3;  int result; int i, d; int fact = 1; double n4; int a;
 
 
 	printf("\n	공학용 계산기	\n\n");
@@ -94,7 +94,7 @@ int main(void)
 		break;
 
 	case 9:
-		printf("숫자를 입력하시오: ");
+		printf("Enter a number: ");
 		scanf_s("%d", &n1);
 		for (i = 1; i <= n1; i++)
 			fact = fact * i;
@@ -166,6 +166,7 @@ int main(void)
 	case 0:
 		printf("공학용 계산기를 종료합니다.");
 		return 0;
+    
 	default:
 		cout << "잘못된 입력입니다.";
 		break;
