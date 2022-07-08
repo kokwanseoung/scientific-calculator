@@ -101,7 +101,7 @@ int main()
 		//제곱계산
 		break;
 
-	case 9':
+	case 9:
 		printf("Enter a number: ");
 		scanf_s("%d", &n1);
 		for (i = 1; i <= n1; i++)
