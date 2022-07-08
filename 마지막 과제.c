@@ -107,6 +107,10 @@ int main()
 
 	case 8:
 		//제곱계산
+		printf("숫자를 입력하시오 : ");
+		scanf_s("%d", &n1);
+		result = n1 * n1;
+		printf("입력하신 숫자 %d 의 제곱의 값은 %d입니다.", n1, result);
 		break;
 
 	case 9:
