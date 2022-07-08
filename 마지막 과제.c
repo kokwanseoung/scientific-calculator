@@ -9,8 +9,18 @@ using namespace std;
 int main()
 
 {
+
 	int n1, n2, n3;  int result; int i, d; int fact = 1; double n4; int a;
+  
 	/*cout << "	 공학용 계산기 			\n";
+	double n1, n2;
+	double result;
+	int n1, n2;
+	int result;
+	int i, fact = 0;
+	double n3;
+	char math_sign;
+	cout << "	 공학용 계산기 			\n";
 	cout << " ------------------------------ \n\n";
 	cout << "   +     -      /       *   \n\n";
 	cout << "   log   exp    √      ^   \n\n";
@@ -91,8 +101,8 @@ int main()
 		//제곱계산
 		break;
 
-	case 9:
-		printf("숫자를 입력하시오: ");
+	case 9':
+		printf("Enter a number: ");
 		scanf_s("%d", &n1);
 		for (i = 1; i <= n1; i++)
 			fact = fact * i;
@@ -140,12 +150,7 @@ int main()
 		cout << "잘못된 입력입니다.";
 		break;
 
+
 	}
-
-
-
-
-
-
 
 }
