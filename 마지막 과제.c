@@ -93,7 +93,7 @@ int main(void)
 		break;
 
 	case 9:
-		printf("Enter a number: ");
+		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n1);
 		for (i = 1; i <= n1; i++)
 			fact = fact * i;
