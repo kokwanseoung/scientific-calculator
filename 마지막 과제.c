@@ -33,7 +33,8 @@ int main(void)
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n2);
 		result = n1 + n2;
-		printf("%d + %d = %d ", n1, n2, result);
+		printf("\n %d + %d = %d \n", n1, n2, result);
+		main();
 		break;
 
 	case 2:
@@ -42,7 +43,8 @@ int main(void)
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n2);
 		result = n1 - n2;
-		printf("%d - %d = %d ", n1, n2, result);
+		printf("\n%d - %d = %d \n", n1, n2, result);
+		main();
 		break;
 
 	case 3:
@@ -51,7 +53,8 @@ int main(void)
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n2);
 		result = n1 * n2;
-		printf("%d * %d = %d ", n1, n2, result);
+		printf("\n%d * %d = %d \n", n1, n2, result);
+		main();
 		break;
 
 	case 4:
@@ -60,27 +63,31 @@ int main(void)
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n2);
 		result = n1 / n2;
-		printf("%d / %d = %d ", n1, n2, result);
+		printf("\n%d / %d = %d \n", n1, n2, result);
+		main();
 		break;
 
 	case 5:
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n3);
 		result = log10(n3);
-		printf("log10 %d = %d ", n3, result);
+		printf("\nlog10 %d = %d \n", n3, result);
+		main();
 		break;
 
 	case 6:
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n3);
 		result = exp(n3);
-		printf("exp(%d) = %d ", n3, result);
+		printf("\nexp(%d) = %d \n", n3, result);
+		main();
 		break;
 
 	case 7:
 		printf("숫자를 입력하시오: ");
 		scanf_s("%lf", &n4);
-		printf("입력하신 숫자 %0.3lf 의 제곱근의 값은 %0.3lf입니다.", n4, sqrt(n4));
+		printf("\n입력하신 숫자 %0.3lf 의 제곱근의 값은 %0.3lf입니다.\n", n4, sqrt(n4));
+		main();
 		break;
 
 	case 8:
@@ -88,7 +95,8 @@ int main(void)
 		scanf_s("%d", &n1);
 		printf("숫자를 입력하시오 : ");
 		scanf_s("%d", &n2);
-		printf("입력하신 숫자 %d ^ %d 제곱의 값은 %0.1lf입니다.", n1, n2, pow(n1, n2));
+		printf("\n입력하신 숫자 %d ^ %d 제곱의 값은 %0.1lf입니다.\n", n1, n2, pow(n1, n2));
+		main();
 		break;
 
 	case 9:
@@ -96,7 +104,8 @@ int main(void)
 		scanf_s("%d", &n1);
 		for (i = 1; i <= n1; i++)
 			fact = fact * i;
-		printf("입력하신 숫자 %d 의 팩토리얼값은 %d입니다. \n", n1, fact);
+		printf("\n입력하신 숫자 %d 의 팩토리얼값은 %d입니다. \n", n1, fact);
+		main();
 		break;
 
 	case 10:
@@ -120,10 +129,10 @@ int main(void)
 		multi.real = (a1.real * a2.real) - (a1.imagin * a2.imagin);
 		multi.imagin = (a1.real * a2.real) + (a1.imagin * a2.imagin);
 
-		printf("입력받은 두 복소수의 합은 실수부분 : %0.2lf , 허수부분 : %0.2lf입니다.\n", plus.real, plus.imagin);
+		printf("\n입력받은 두 복소수의 합은 실수부분 : %0.2lf , 허수부분 : %0.2lf입니다.\n", plus.real, plus.imagin);
 		printf("입력받은 두 복소수의 차는 실수부분 : %0.2lf , 허수부분 : %0.2lf입니다.\n", minuse.real, minuse.imagin);
 		printf("입력받은 두 복소수의 곱은 실수부분 : %0.2lf , 허수부분 : %0.2lf입니다.\n", multi.real, multi.imagin);
-
+		main();
 		break;
 
 	case 11:
@@ -192,6 +201,7 @@ int main(void)
 				printf("%2d ", multi_arr[i][j]);
 			}
 		}
+		main();
 		break;
 
 	case 12:
@@ -217,20 +227,23 @@ int main(void)
 		{
 			printf("\n입력하신 식은 근이 존재하지 않습니다.\n");
 		}
+		main();
 		break;
 
 	case 13:
 		printf("각도(0~360°)를 숫자만 입력해 주세요.: ");
 		scanf_s("%lf", &n4);
 		printf("sin %lf= %0.3lf\ncos %lf = %0.3lf\ntan %lf = %0.3lf\n", n4, sin(n4), n4, cos(n4), n4, tan(n4));
+		main();
 		break;
 
 	case 0:
-		printf("공학용 계산기를 종료합니다.");
+		printf("\n공학용 계산기를 종료합니다.\n");
 		return 0;
-    
+
 	default:
-		printf("잘못된 입력입니다.");
+		printf("\n잘못된 입력입니다.\n");
+		main();
 		break;
 
 
