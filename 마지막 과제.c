@@ -231,7 +231,7 @@ int main(void)
 		return 0;
     
 	default:
-		cout << "잘못된 입력입니다.";
+		printf("잘못된 입력입니다.");
 		break;
 
 
