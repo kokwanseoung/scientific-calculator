@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include <iostream>
 #include <math.h>
-using namespace std;
 typedef struct Complex { double real; double imagin; }; Complex;
 
 int main(void)
